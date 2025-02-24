@@ -15,13 +15,13 @@ export function openRatingModal(id, updateListCallback) {
   setupEventListeners(updateListCallback);
 }
 
-export const setupEventListeners = updateListCallback => {
+export const setupEventListeners = (updateListCallback) => {
   const closeRatingModal = document.getElementById('closeRatingModal');
   const ratingForm = document.getElementById('ratingForm');
 
   closeRatingModal.addEventListener('click', hideRatingModal);
 
-  ratingForm.addEventListener('submit', event =>
+  ratingForm.addEventListener('submit', (event) => 
     handleRatingSubmit(event, updateListCallback)
   );
   document.querySelectorAll('.stars input').forEach(star => {
